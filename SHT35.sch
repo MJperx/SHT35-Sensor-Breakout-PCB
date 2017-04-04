@@ -1,0 +1,283 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:SHT35
+LIBS:SHT35-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 8268 11693 portrait
+encoding utf-8
+Sheet 1 1
+Title "SHT35 Breakout Board"
+Date "2017-04-04"
+Rev "v1.0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L SHT35-DIS-B U1
+U 1 1 58E3BF1A
+P 4050 3700
+F 0 "U1" H 4000 3700 50  0000 L CNN
+F 1 "SHT35-DIS-B" H 3800 3350 50  0000 L CNN
+F 2 "w_smd_qfn:dfn8" H 4050 3700 50  0001 L CNN
+F 3 "SHT35 Series 5.5 V 800 µA Surface Mount Humidity and Temperature Sensor" H 4700 3300 50  0001 L CNN
+	1    4050 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR01
+U 1 1 58E3C003
+P 1150 1200
+F 0 "#PWR01" H 1150 1050 50  0001 C CNN
+F 1 "+5V" H 1150 1340 50  0000 C CNN
+F 2 "" H 1150 1200 50  0001 C CNN
+F 3 "" H 1150 1200 50  0001 C CNN
+	1    1150 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 58E3C019
+P 750 1200
+F 0 "#PWR02" H 750 950 50  0001 C CNN
+F 1 "GND" H 750 1050 50  0000 C CNN
+F 2 "" H 750 1200 50  0001 C CNN
+F 3 "" H 750 1200 50  0001 C CNN
+	1    750  1200
+	-1   0    0    1   
+$EndComp
+$Comp
+L PWR_FLAG #FLG03
+U 1 1 58E3C034
+P 750 1250
+F 0 "#FLG03" H 750 1325 50  0001 C CNN
+F 1 "PWR_FLAG" H 750 1400 50  0000 C CNN
+F 2 "" H 750 1250 50  0001 C CNN
+F 3 "" H 750 1250 50  0001 C CNN
+	1    750  1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L PWR_FLAG #FLG04
+U 1 1 58E3C049
+P 1150 1250
+F 0 "#FLG04" H 1150 1325 50  0001 C CNN
+F 1 "PWR_FLAG" H 1150 1400 50  0000 C CNN
+F 2 "" H 1150 1250 50  0001 C CNN
+F 3 "" H 1150 1250 50  0001 C CNN
+	1    1150 1250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	750  1200 750  1250
+Wire Wire Line
+	1150 1200 1150 1250
+$Comp
+L GND #PWR05
+U 1 1 58E3C07A
+P 4750 4000
+F 0 "#PWR05" H 4750 3750 50  0001 C CNN
+F 1 "GND" H 4750 3850 50  0000 C CNN
+F 2 "" H 4750 4000 50  0001 C CNN
+F 3 "" H 4750 4000 50  0001 C CNN
+	1    4750 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 3900 4750 3900
+Wire Wire Line
+	4750 3700 4750 4000
+Wire Wire Line
+	4650 3800 4750 3800
+Connection ~ 4750 3900
+$Comp
+L GND #PWR06
+U 1 1 58E3C0D6
+P 2550 3650
+F 0 "#PWR06" H 2550 3400 50  0001 C CNN
+F 1 "GND" H 2550 3500 50  0000 C CNN
+F 2 "" H 2550 3650 50  0001 C CNN
+F 3 "" H 2550 3650 50  0001 C CNN
+	1    2550 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 3500 3450 3500
+$Comp
+L C C1
+U 1 1 58E3C11A
+P 5400 3500
+F 0 "C1" V 5150 3400 50  0000 L CNN
+F 1 "100nF" V 5250 3400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 5438 3350 50  0001 C CNN
+F 3 "" H 5400 3500 50  0001 C CNN
+	1    5400 3500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4650 3500 5250 3500
+$Comp
+L R R1
+U 1 1 58E3C218
+P 3000 3950
+F 0 "R1" H 3100 3900 50  0000 C CNN
+F 1 "10k" V 3000 3950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2930 3950 50  0001 C CNN
+F 3 "" H 3000 3950 50  0001 C CNN
+	1    3000 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 58E3C250
+P 3350 4050
+F 0 "R2" H 3450 4000 50  0000 C CNN
+F 1 "10k" V 3350 4050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3280 4050 50  0001 C CNN
+F 3 "" H 3350 4050 50  0001 C CNN
+	1    3350 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 3900 3450 3900
+Text Label 3250 3900 2    60   ~ 0
+SCL
+Connection ~ 3350 3900
+Wire Wire Line
+	2900 3800 3450 3800
+Text Label 2900 3800 2    60   ~ 0
+SDA
+Connection ~ 3000 3800
+Wire Wire Line
+	2550 3500 2550 3650
+Wire Wire Line
+	3000 4200 3350 4200
+Text Label 5000 3600 0    60   ~ 0
+ALERT
+Wire Wire Line
+	5000 3600 4650 3600
+Wire Wire Line
+	4650 3700 5650 3700
+Connection ~ 4750 3800
+Text Label 3350 3600 2    60   ~ 0
+NRESET
+Wire Wire Line
+	3350 3600 3450 3600
+$Comp
+L +5V #PWR07
+U 1 1 58E3C63E
+P 4750 3300
+F 0 "#PWR07" H 4750 3150 50  0001 C CNN
+F 1 "+5V" H 4750 3440 50  0000 C CNN
+F 2 "" H 4750 3300 50  0001 C CNN
+F 3 "" H 4750 3300 50  0001 C CNN
+	1    4750 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR08
+U 1 1 58E3C6EE
+P 3000 4350
+F 0 "#PWR08" H 3000 4200 50  0001 C CNN
+F 1 "+5V" H 3000 4490 50  0000 C CNN
+F 2 "" H 3000 4350 50  0001 C CNN
+F 3 "" H 3000 4350 50  0001 C CNN
+	1    3000 4350
+	-1   0    0    1   
+$EndComp
+Connection ~ 3000 4200
+Wire Wire Line
+	3000 4100 3000 4350
+$Comp
+L CONN_01X06 CONN1
+U 1 1 58E3C781
+P 4050 5400
+F 0 "CONN1" H 4050 5750 50  0000 C CNN
+F 1 "CONN_01X06" V 4150 5400 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 4050 5400 50  0001 C CNN
+F 3 "" H 4050 5400 50  0001 C CNN
+	1    4050 5400
+	0    -1   1    0   
+$EndComp
+$Comp
+L +5V #PWR09
+U 1 1 58E3C8A3
+P 3800 5050
+F 0 "#PWR09" H 3800 4900 50  0001 C CNN
+F 1 "+5V" H 3800 5190 50  0000 C CNN
+F 2 "" H 3800 5050 50  0001 C CNN
+F 3 "" H 3800 5050 50  0001 C CNN
+	1    3800 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 5200 3800 5050
+$Comp
+L GND #PWR010
+U 1 1 58E3C90C
+P 3900 4800
+F 0 "#PWR010" H 3900 4550 50  0001 C CNN
+F 1 "GND" H 3900 4650 50  0000 C CNN
+F 2 "" H 3900 4800 50  0001 C CNN
+F 3 "" H 3900 4800 50  0001 C CNN
+	1    3900 4800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3900 4800 3900 5200
+Text Label 4000 5100 1    60   ~ 0
+SCL
+Wire Wire Line
+	4000 5200 4000 5100
+Text Label 4100 5100 1    60   ~ 0
+SDA
+Wire Wire Line
+	4100 5100 4100 5200
+Text Label 4200 5100 1    60   ~ 0
+NRESET
+Wire Wire Line
+	4200 5100 4200 5200
+Text Label 4300 5100 1    60   ~ 0
+ALERT
+Wire Wire Line
+	4300 5100 4300 5200
+Wire Wire Line
+	4750 3300 4750 3500
+Connection ~ 4750 3500
+Wire Wire Line
+	5650 3700 5650 3500
+Wire Wire Line
+	5650 3500 5550 3500
+Connection ~ 4750 3700
+$EndSCHEMATC
